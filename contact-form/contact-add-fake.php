@@ -1,6 +1,8 @@
 <?php
 require_once '../vendor/autoload.php';
 
+// check request method POST
+
 
 $faker = Faker\Factory::create();
 $faker->addProvider(new Faker\Provider\en_ZA\PhoneNumber($faker));
@@ -10,10 +12,10 @@ $email = $faker->email;
 $messageBody = $faker->text;
 
 $phone = $faker->mobileNumber; 
-var_dump(compact([$name,$email,$messageBody,$phone]));
-die();
+// var_dump(compact([$name,$email,$messageBody,$phone]));
+// die();
 
-$dsn = "sqlite:db.sqlite";
+$dsn = "sqlite:sqlite.db";
 $pdo = new \PDO($dsn, null, null);
 $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
 
