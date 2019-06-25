@@ -3,20 +3,22 @@ require_once '../vendor/autoload.php';
 
 
 $faker = Faker\Factory::create();
-$faker->addProvider(new Faker\Provider\fr_FR\PhoneNumber($faker));
+$faker->addProvider(new Faker\Provider\en_ZA\PhoneNumber($faker));
+
 $name = $faker->name;
 $email = $faker->email;
 $messageBody = $faker->text;
-var_dump($faker->mobileNumber); 
 
-var_dump(compact('name','email','messageBody'));
+$phone = $faker->mobileNumber; 
+var_dump(compact([$name,$email,$messageBody,$phone]));
+die();
 
 $dsn = "sqlite:db.sqlite";
 $pdo = new \PDO($dsn, null, null);
 $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
-die();
-$stmt = $pdo->prepare("INSERT INTO events('created_at') values(datetime('now'))");
-$stmt->execute();
+
+$stmt = $pdo->prepare("INSERT INTO messages('user_name','user_email','user_phone','message_body','created_at') values(?, ?, ?, ?, datetime('now'))");
+$stmt->execute([$name, $email, $phone, $messageBody]);
 
 
 // CREATE TABLE `messages` (
