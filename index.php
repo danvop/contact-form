@@ -11,5 +11,7 @@
 <?php
 require 'contact-form/form.php';
 ?>
+
+<a href="contact-form/contact-add-fake.php">fake</a>
 </body>
 </html>

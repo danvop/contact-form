@@ -2,6 +2,11 @@
 require_once '../vendor/autoload.php';
 
 // check request method POST
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+  header('location: ..');
+  die();
+  // exit('Invalid Request');
+}
 
 
 $faker = Faker\Factory::create();
@@ -15,12 +20,16 @@ $phone = $faker->mobileNumber;
 // var_dump(compact([$name,$email,$messageBody,$phone]));
 // die();
 
-$dsn = "sqlite:sqlite.db";
+$dsn = "sqlite:db.sqlite";
 $pdo = new \PDO($dsn, null, null);
 $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
 
 $stmt = $pdo->prepare("INSERT INTO messages('user_name','user_email','user_phone','message_body','created_at') values(?, ?, ?, ?, datetime('now'))");
 $stmt->execute([$name, $email, $phone, $messageBody]);
+
+
+
+
 
 
 // CREATE TABLE `messages` (
