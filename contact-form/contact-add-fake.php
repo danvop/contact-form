@@ -28,8 +28,8 @@ $stmt = $pdo->prepare("INSERT INTO messages('user_name','user_email','user_phone
 $stmt->execute([$name, $email, $phone, $messageBody]);
 
 
-
-
+// return to site root
+header('location: ..');
 
 
 // CREATE TABLE `messages` (
