@@ -12,7 +12,7 @@
         <a class="nav-link" href="contacts-show.php">Contacts</a>
       </li>
       <li class="nav-item
-      <?= isset($activeArchive) ? 'active' : '' ?>
+        <?= isset($activeArchive) ? 'active' : '' ?>
       ">
         <a class="nav-link" href="contacts-show-archive.php">
         Arhived</a>
