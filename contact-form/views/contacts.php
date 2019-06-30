@@ -3,9 +3,13 @@
 
 <!-- body section -->
 
+<<<<<<< HEAD
 <!-- navbar -->
 <?php require 'partials/navbar.php' ?>
 
+=======
+<!-- contact list (contacts) -->
+>>>>>>> 2649c1e0b81ec0bca93622820f36a839fcd2a38e
 <div class="container">
 
 <?php foreach ($stmt as $row) : ?>
@@ -17,7 +21,9 @@
 
       <div class="my-auto">
         <div><?=$row['user_name']?></div>
+        <!-- carbon data -->
         <small><?=$row['created_at']?></small>
+        
       </div>
 
       <button class="btn btn-success ml-auto my-auto collapsed" type="button" data-toggle="collapse" data-target="#collapse<?=$row['id']?>">
@@ -36,9 +42,11 @@
           <img src="img/fa-envelope-white-30.png" alt="">
         </a>      
         </button>
-
         <a class="btn btn-success" href="tel:<?=$row['user_phone']?>"><img src="img/fa-phone-30-ffffff.png" alt=""></a> 
 
+        <!-- for active make arhive button -->
+        <!-- for archived make restore button -->
+        <!-- AJAX -->
       </div>
     </div>
   </div>
