@@ -3,6 +3,9 @@
 
 <!-- body section -->
 
+<!-- navbar -->
+<?php require 'partials/navbar.php' ?>
+
 <div class="container">
 
 <?php foreach ($stmt as $row) : ?>

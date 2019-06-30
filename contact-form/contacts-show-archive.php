@@ -7,13 +7,13 @@ $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
 //fetch data
 
-$stmt = $pdo->query("SELECT id, user_name, user_email, user_phone, message_body, created_at FROM messages WHERE (archived = 0) ORDER BY created_at DESC");
+$stmt = $pdo->query("SELECT id, user_name, user_email, user_phone, message_body, created_at FROM messages WHERE (archived = 1) ORDER BY created_at DESC");
 $stmt->fetch(\PDO::FETCH_ASSOC);
 
 $mail_subject = 'Mail from Our Site';
 
 // make navbar active
-$activeContacts = true;
+$activeArchive = true;
 // return view
 require 'views/contacts.php';
 

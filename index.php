@@ -13,6 +13,12 @@
 require 'contact-form/views/form-contact-add-fake.php';
 ?>
 
+<div>
+<a href="contact-form/contacts-show.php">show contacts</a>
+</div>
+<div>
+<a href="contact-form/contacts-show-archive.php">show archived contacts</a>
+</div>
 
 </body>
 </html>
