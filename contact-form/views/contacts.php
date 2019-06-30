@@ -3,13 +3,9 @@
 
 <!-- body section -->
 
-<<<<<<< HEAD
 <!-- navbar -->
 <?php require 'partials/navbar.php' ?>
 
-=======
-<!-- contact list (contacts) -->
->>>>>>> 2649c1e0b81ec0bca93622820f36a839fcd2a38e
 <div class="container">
 
 <?php foreach ($stmt as $row) : ?>
