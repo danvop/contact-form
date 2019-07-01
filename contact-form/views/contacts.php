@@ -8,7 +8,7 @@
 
 <div class="container">
 
-<?php foreach ($stmt as $row) : ?>
+<?php foreach ($contacts as $row) : ?>
   
 
   <div class="card m-1" >
