@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-xl navbar-light bg-light">
 <!-- show contacts link as brand link -->
   <a class="navbar-brand" href="..">Home</a>
   <a class="navbar-brand"><?= isset($navHeader) ? $navHeader : '' ?></a>
