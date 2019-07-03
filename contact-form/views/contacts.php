@@ -39,7 +39,7 @@
         </a>      
         </button>
         <a class="btn btn-success" href="tel:<?=$row['user_phone']?>"><img src="img/fa-phone-30-ffffff.png" alt=""></a>
-        <a class="btn btn-success" href="tel:<?=$row['user_phone']?>"><img src="img/fa-archive-30-ffffff.png" alt=""></a>
+        <a class="btn btn-success ml-auto" href="tel:<?=$row['user_phone']?>"><img src="img/fa-archive-30-ffffff.png" alt=""></a>
         
         <!-- fa-archive-30-ffffff -->
         <!-- for active make arhive button -->
