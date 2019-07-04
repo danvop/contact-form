@@ -11,7 +11,7 @@
 <?php foreach ($contacts as $row) : ?>
   
 
-  <div class="card m-1" >
+  <div class="card m-1" id="card-id-<?=$row['id']?>" >
     <!-- card-header -->
     <div class="card-header d-flex">
 
@@ -32,14 +32,21 @@
       <div class="card-body">
         <?=$row['message_body']?> 
       </div>
-      <div class="card-footer">
-        <button class="btn btn-primary">
+      <div class="card-footer d-flex">
+        <!-- define archive or restore button  -->
+        <?php if($navHeader === "Contacts") : ?>
+          <a class="btn btn-secondary" onclick="$('#card-id-<?=$row['id']?>').fadeOut()"><img src="img/fa-archive-30-ffffff.png" alt=""></a>
+        <?php else : ?>
+          <a class="btn btn-info"><img src="img/fi-upload-30-ffffff.png" alt=""></a>
+        <?php endif ?>
+
+        <button class="btn btn-primary ml-auto mr-2">
           <a href="mailto:<?=$row['user_email']?>?subject=<?=$mail_subject?>" target="_blank">
           <img src="img/fa-envelope-white-30.png" alt="">
         </a>      
         </button>
         <a class="btn btn-success" href="tel:<?=$row['user_phone']?>"><img src="img/fa-phone-30-ffffff.png" alt=""></a>
-        <a class="btn btn-success ml-auto" href="tel:<?=$row['user_phone']?>"><img src="img/fa-archive-30-ffffff.png" alt=""></a>
+        
         
         <!-- fa-archive-30-ffffff -->
         <!-- for active make arhive button -->

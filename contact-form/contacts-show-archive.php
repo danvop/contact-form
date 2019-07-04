@@ -3,7 +3,7 @@ require_once '../vendor/autoload.php';
 
 //db connect
 $dsn = "sqlite:db.sqlite";
-$pdo = new \PDO($dsn, null, null);
+$pdo = new \PDO($dsn);
 $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION); 
 
 //fetch data
