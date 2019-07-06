@@ -62,6 +62,8 @@
 <!-- container ends -->
 </div>
 
+
+
 <!-- footer section -->
 <?php require 'partials/footer.php'; ?>
 
