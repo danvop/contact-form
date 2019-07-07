@@ -11,8 +11,8 @@ $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
 // update messages set archived = 1 where id = 1;
 
-if(!empty($_GET['id'])) {
-  $id =  $_GET['id'];
+if(!empty($_POST['id'])) {
+  $id =  $_POST['id'];
 } else {
   exit('try again');
 }

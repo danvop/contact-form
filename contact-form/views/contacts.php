@@ -35,9 +35,9 @@
       <div class="card-footer d-flex">
         <!-- define archive or restore button  -->
         <?php if($navHeader === "Contacts") : ?>
-          <a class="btn btn-secondary" onclick="$('#card-id-<?=$row['id']?>').fadeOut()"><img src="img/fa-archive-30-ffffff.png" alt=""></a>
+          <a class="btn btn-secondary" onclick="messageArchive(<?=$row['id']?>)"><img src="img/fa-archive-30-ffffff.png" alt=""></a>
         <?php else : ?>
-          <a class="btn btn-info"><img src="img/fi-upload-30-ffffff.png" alt=""></a>
+          <a class="btn btn-info" onclick="messageRestore(<?=$row['id']?>)"><img src="img/fi-upload-30-ffffff.png" alt=""></a>
         <?php endif ?>
 
         <button class="btn btn-primary ml-auto mr-2">
@@ -61,10 +61,36 @@
 
 <!-- container ends -->
 </div>
+<script>
 
+function messageArchive(id){
+  $.ajax({
+  method: "POST",
+  url: "contact-archive.php",
+  data: { id: id}
+})
+    .done(function(){
+      $("#card-id-"+id).fadeOut()
+    });
+  
+}
+function messageRestore(id){
+  $.ajax({
+  method: "POST",
+  url: "contact-restore.php",
+  data: { id: id}
+  })
+    .done(function(){
+      $("#card-id-"+id).fadeOut()
+    });
+    
+}
+
+</script>
 
 
 <!-- footer section -->
 <?php require 'partials/footer.php'; ?>
+
 
 
