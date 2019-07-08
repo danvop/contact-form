@@ -15,6 +15,7 @@ $contacts = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
 // make nav Header
 $navHeader = 'Contacts';
+$pageTitle = 'Contacts';
 
 // mail subject
 $mail_subject = 'Mail from Our Site';

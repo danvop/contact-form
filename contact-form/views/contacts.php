@@ -2,7 +2,8 @@
 <?php require 'partials/header.php' ?>
 
 <!-- body section -->
-
+<!-- navs -->
+<?php require 'partials/navs.php' ?>
 <!-- navbar -->
 <?php require 'partials/navbar.php' ?>
 

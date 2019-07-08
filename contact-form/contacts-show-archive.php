@@ -15,7 +15,11 @@ $contacts = $stmt->fetchAll(\PDO::FETCH_ASSOC);
 
 // make nav Header
 $navHeader = 'Archive';
-
+// use pageTitle to substitute navHeader variable
+// to show Nav Title and to make Navs status as active
+// and use onclick function+pageTitle
+// or add pageTitle to eventLestener function name
+$pageTitle = 'Archive';
 // mail subject
 $mail_subject = 'Mail from Our Site';
 
